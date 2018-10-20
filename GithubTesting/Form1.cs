@@ -12,6 +12,8 @@ namespace GithubTesting
 {
     public partial class Form1 : Form
     {
+        DataAccess data = new DataAccess();
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace GithubTesting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome to GitHub!");
+            dataGridView1.DataSource = data.GetCustomers();
         }
     }
 }
